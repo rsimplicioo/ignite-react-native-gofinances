@@ -15,14 +15,15 @@ import {
   HighlightCards,
   Transactions,
   Title,
-  TransactionList
+  TransactionList,
+  LogoutButton
 } from './styles';
 
 export interface DataListProps extends TransactionCardProps {
   id: string;
 }
 
-export function DashBoard() {
+export function Dashboard() {
   const data: DataListProps[] = [
     {
       id: '1',
@@ -73,7 +74,10 @@ export function DashBoard() {
             </User>
           </UserInfo>
 
-          <Icon name="power" />
+          <LogoutButton>
+            <Icon name="power" />
+          </LogoutButton>
+
         </UserWrapper>
       </Header>
       <HighlightCards>
